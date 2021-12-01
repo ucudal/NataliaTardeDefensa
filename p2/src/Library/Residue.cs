@@ -1,15 +1,22 @@
+nusing System;
+using System.Collections.Generic;
+
 namespace Ucu.Poo.Defense
 {
     public class Residue
     {
         public string Name { get; set; }
-
-        public ResidueType Type { get; set; }
-
+        public ResidueType Resid { get; set; }
         public Residue(string name, ResidueType type)
         {
             this.Name = name;
-            this.Type = type;
+            ResidueType resid = new ResidueType (type);
+            this.Resid = resid;  
+            
         }
+        public void Accept(Visitor visitor)
++       {
++           visitor.Visit(this);
++       }
     }
 }

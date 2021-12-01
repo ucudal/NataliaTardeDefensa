@@ -17,5 +17,10 @@ namespace Ucu.Poo.Defense
             this.Quantity = quantity;
             this.Price = price;
         }
+
+        public void Accept(Visitor visitor)
++       {
++           visitor.Visit(this);
++       }
     }
 }
