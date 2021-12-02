@@ -24,5 +24,16 @@ namespace Ucu.Poo.Defense
             this.code = code;
             this.SubTotal = amount;
         }
+
+        public override string GetTextToPrint()
+        {
+            return $"Descuento: -${this.Amount}\n";
+        }
+
+        public override string GetTextToPrint()
+        {
+            return $"Descuento: -${this.Amount}\n";
+        }
+
     }
 }
