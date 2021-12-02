@@ -1,4 +1,7 @@
-﻿namespace Ucu.Poo.Defense
+﻿using System;
+using System.Collections.Generic;
+
+namespace Ucu.Poo.Defense
 {
     public class ResidueType
     {
@@ -6,10 +9,11 @@
 
         public bool IsOrganic { get; set; }
 
-        public ResidueType(string name, bool isOrganic)
+        public ResidueType(Residue name, bool isOrganic)
         {
-            this.Name = name;
             this.IsOrganic = isOrganic;
+            Residue residu = new Residue (name);
+            this.residu = residu;
         }
     }
 }
